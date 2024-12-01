@@ -1,0 +1,682 @@
+/* Font importálása */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
+
+/* Alapértelmezett stílusok */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: blanchedalmond;
+    font-size: 16px;
+}
+
+/* Fejléc */
+#header {
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    font-size: 22px;
+    background-color: cornsilk;
+    
+}
+
+#vonal {
+    margin-top: 1.5vh;
+    background-color: cornsilk;
+    height: 1vh;
+    border-radius: 1vw;
+    flex-basis: 90%;
+    border: none;
+}
+
+/* Navigáció */
+nav {
+    display: flex;
+    justify-content: center;
+
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    background-color: blanchedalmond;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    text-align: center;
+
+}
+
+nav li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 3.8vw;
+}
+
+nav li a#active {
+    font-weight: bold;
+}
+
+nav li a:hover,
+nav li a#active:hover {
+    background-color: burlywood;
+    border-radius: 8px;
+}
+
+/* Bevezető szakasz */
+div#bevezeto,
+div#jordan,
+div#palyafutasa,
+div#nyeremenyjatek {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+div#bevezeto figure,
+div#jordan figure,
+div#palyafutasa figure,
+div#nyeremenyjatek figure,
+#nyeremnyjatek figure {
+    display: flex;
+    align-self: center;
+    order: 2;
+    padding-top: 30px;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+figcaption {
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center
+}
+
+#bevezeto article,
+#jordan article,
+#palyafutasa article,
+div#nyeremenyjatek article {
+    padding: 35px;
+    background-color: cornsilk;
+    border-radius: 8px;
+}
+
+
+
+#bevezeto img,
+#jordan img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#palyafutasa img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#nyeremenyjatek img {
+    border-radius: 8px;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Lábléc */
+#footer {
+        display: flex;
+        justify-content: center;
+        padding: 20px
+         ; /* Increase the top and bottom padding (20px top and bottom, 10px left and right) */
+        font-size: 18px;
+        background-color: cornsilk;
+        font-style: italic;
+}
+
+/* Kép nagyítás */
+img.nagyit:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+/* Videó */
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cornsilk;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.alcím {
+    text-align: center;
+    font-style: italic;
+    font-size: 28px;
+}
+
+/* Idővonal */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto
+}
+
+/* Középvonal kialakítása */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    background-color: cornsilk;
+    top: 20px;
+    bottom: 0;
+    left: 31px;
+    transform: translateX(-50%);
+}
+
+/* Idővonal konténerek */
+.container {
+    position: relative;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: cornsilk;
+    border: 5px solid rgb(216, 161, 141);
+    top: 35px;
+    border-radius: 50%;
+    z-index: 1;
+    left: 50%;
+
+
+}
+
+/* Bal és jobb oldali konténerek */
+.left {
+    left: 0%;
+}
+
+.right {
+    left: 0%;
+}
+
+.left::after,
+.right::after {
+    left: 15px;
+}
+
+/* Konténer tartalma */
+.content {
+    padding: 20px 30px;
+    background-color: cornsilk;
+    position: relative;
+    border-radius: 8px;
+}
+
+/* Képek a konténereken belül */
+
+.image {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.container.left .image,
+.container.right .image {
+    right: auto;
+    left: auto;
+}
+
+
+/* Gombok */
+.button {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#ugras,
+#ugras2,
+#ugras3,
+#ugras4 {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: rgb(255, 220, 175);
+    border-radius: 8px;
+    font-size: 16px;
+    border: none;
+    box-shadow: black;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#ugras:hover,
+#ugras2:hover,
+#ugras3:hover,
+#ugras4:hover {
+    background-color: #d2a679;
+}
+
+/* Jordan cipők és képek */
+#jordan4,
+#jordan1,
+#jordantravis,
+#jordandior,
+#jbalvin {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+#jordan4 figure,
+#jordan1 figure,
+#jordandior figure,
+#jordantravis figure,
+#jbalvin figure {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    order: 2;
+}
+
+#jordan4 article,
+#jordan1 article,
+#jordantravis article,
+#jordandior article,
+#jbalvin article {
+    padding: 30px;
+    background-color: cornsilk;
+    border-radius: 8px;
+    margin-left: 20px;
+    flex: 1;
+    text-align: justify;
+}
+
+#jordan4 img,
+#jordan1 img,
+#jordandior img,
+#jordandior img,
+#jordantravis img,
+#jbalvin img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 8px;
+}
+
+#kepek img.original {
+    opacity: 1;
+}
+
+#kepek img.hovered {
+    opacity: 0;
+}
+
+#kepek:hover img.original {
+    opacity: 0;
+}
+
+#kepek:hover img.hovered {
+    opacity: 1;
+}
+
+/* Flexbox konténerek */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#kollekcio {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+#allando {
+    flex-basis: 100%;
+}
+
+#kerdoiv {
+    display: flex;
+    flex-direction: column;
+    background-color: cornsilk;
+    justify-content: center;
+    margin: 100px;
+    padding: 10px;
+}
+
+#kerdoiv article {
+    background-color: #faf2e6;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+/* desing*/
+/* Alapértelmezett stílusok mobil nézethez (mobile-first) */
+#tervezonezet {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: cornsilk;
+    padding: 40px;
+    margin: 30px;
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #ede6e6;
+    border-radius: 8px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    /* Mobilnézet: képek egymás alatt */
+    gap: 30px;
+    padding: 30px;
+}
+
+
+.gallery img {
+    width: 100%;
+    /* Mobilon teljes szélesség */
+    max-width: 100%;
+    /* Ne legyen szélesebb, mint a szülő elem */
+    height: auto;
+    /* A képek magasságát automatikusan beállítjuk, hogy ne torzuljanak */
+    margin: 0 auto;
+    /* Középre igazítás */
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+    border-color: green;
+    border-width: 5px;
+}
+
+.gallery img.selected {
+    border-color: red;
+    transform: scale(1.1);
+    border-width: 5px;
+}
+
+/* Gomb és eredmény stílus */
+button {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(228, 165, 103);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darkgray;
+}
+
+.eredmeny {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    /* A max. szélesség 600px, hogy ne legyen túl nagy */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.eredmeny img {
+    width: 100%;
+    /* A képet az elem szélességéhez igazítjuk */
+    max-width: 500px;
+    /* A maximális szélesség 500px-re van korlátozva */
+    height: auto;
+    /* A magasságot automatikusan kezeljük */
+    margin-top: 10px;
+    object-fit: contain;
+    /* A kép ne torzuljon */
+}
+
+
+#galeria{
+    
+    background-color: cornsilk;
+    margin: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.slider {
+    width: 80%;
+    min-width: 400px;
+    margin: auto;
+}
+
+.slick-slide {
+    margin: 0px 5px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: brown;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+} 
+.caption {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: opacity 0.3s, transform 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.center .slick-active .caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Reszponzívitás: */
+
+/* Tablet nézet */
+@media all and (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav li a {
+        font-size: 19px;
+    }
+
+    .timeline:after {
+        left: 50%
+    }
+
+    .container {
+        padding: 10px;
+        position: relative;
+        width: 50%;
+        margin: 80px 0px;
+    }
+
+    .left::after {
+        left: 94%;
+        /* Középre igazítás */
+        transform: translateX(50%);
+        /* A középre igazítás finomhangolása */
+    }
+
+    .right::after {
+        left: 0%;
+        /* Középre igazítás */
+        transform: translateX(-50%);
+        /* A középre igazítás finomhangolása */
+    }
+
+    .right {
+        left: 50%;
+    }
+
+    .image {
+        position: absolute;
+        top: 15px;
+        width: 40%;
+        margin: 15px auto;
+    }
+
+    .image img {
+        width: 150%;
+    }
+
+    .container.left .image {
+        right: -75%;
+    }
+
+    .container.right .image {
+        left: -75%;
+    }
+
+    .gallery {
+        flex-direction: row;
+        /* Tablet nézetben: képek egymás mellett */
+        flex-wrap: wrap;
+        /* Ha nem fér ki, sort tör */
+        justify-content: center;
+        /* Képek középre igazítása */
+        /* Nagyobb távolság képek között */
+    }
+
+    .gallery img {
+        width: 200px;
+        /* Képek méretének növelése tableten */
+        margin: 0;
+        /* Középre igazítás nem szükséges */
+    }
+}
+
+
+/* Számítógép nézet */
+@media all and (min-width: 768px) {
+
+    div#bevezeto,
+    div#jordan,
+    div#palyafutasa,
+    div#kerdoiv,
+    div#nyeremenyjatek {
+        flex-direction: row;
+    }
+
+    div#jordan article {
+        order: 2;
+    }
+
+
+
+    #jordan1,
+    #jordan4,
+    #jordantravis,
+    #jordandior,
+    #jbalvin {
+        flex-direction: row;
+    }
+
+    #jordan4 article,
+    #jordantravis article {
+        order: 2;
+    }
+
+
+    .gallery {
+        /* Még nagyobb távolság képek között */
+        justify-content: center;
+        /* Egyenletes elosztás asztali nézetben */
+    }
+
+    .gallery img {
+        width: 250px;
+        /* Nagyobb képek asztali nézetben */
+    }
+}
